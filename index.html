@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SKYTHO — dronă SAR autonomă de căutare și salvare | Galați</title>
+  <meta name="description" content="SKYTHO este o dronă SAR (search and rescue) autonomă, construită de doi elevi din Galați: apeși SOS pe telefon, drona te găsește cu detecție AI și îți aduce un kit de prim ajutor. Premiul II la Olimpiada Națională de Creativitate Științifică 2026."/>
+  <meta name="keywords" content="SKYTHO, dronă SAR, SAR drone, drona salvare, dronă de căutare și salvare, search and rescue drone, dronă prim ajutor, dronă autonomă, drone România, CEX Galați"/>
+  <meta name="author" content="Otava Radu Ioan, Frumuzache Dorin"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="canonical" href="https://skytho.space/"/>
+  <link rel="alternate" hreflang="ro" href="https://skytho.space/"/>
+  <link rel="alternate" hreflang="en" href="https://skytho.space/en/"/>
+  <link rel="alternate" hreflang="x-default" href="https://skytho.space/"/>
+  <meta name="theme-color" content="#f2f4f1"/>
+  <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://skytho.space/"/>
+  <meta property="og:site_name" content="SKYTHO"/>
+  <meta property="og:locale" content="ro_RO"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+  <meta property="og:title" content="SKYTHO — drona SAR care ajunge la tine înaintea salvatorilor"/>
+  <meta property="og:description" content="Dronă autonomă de căutare și salvare, construită de doi elevi din Galați. Apeși SOS, drona te găsește și îți aduce un kit de prim ajutor."/>
+  <meta property="og:image" content="https://skytho.space/images/og.jpg"/>
+  <meta property="og:image:secure_url" content="https://skytho.space/images/og.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Drona SKYTHO cu trusa de prim ajutor prinsă dedesubt"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="SKYTHO — drona SAR care ajunge la tine înaintea salvatorilor"/>
+  <meta name="twitter:description" content="Dronă autonomă de căutare și salvare, construită de doi elevi din Galați."/>
+  <meta name="twitter:image" content="https://skytho.space/images/og.jpg"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://skytho.space/#website",
+        "url": "https://skytho.space/",
+        "name": "SKYTHO",
+        "alternateName": ["SKYTHO SAR Drone", "SKYTHO dronă de salvare"],
+        "inLanguage": "ro"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://skytho.space/#team",
+        "name": "SKYTHO",
+        "url": "https://skytho.space/",
+        "logo": "https://skytho.space/icon-512.png",
+        "email": "skytho.cex@gmail.com",
+        "sameAs": ["https://www.instagram.com/skytho_drone/", "https://cex.skytho.space/"],
+        "description": "Echipa care a construit SKYTHO, o dronă SAR autonomă de căutare și salvare cu detecție AI a persoanelor și livrare de prim ajutor.",
+        "foundingLocation": { "@type": "Place", "name": "Galați, România" },
+        "member": [
+          { "@type": "Person", "name": "Otava Radu Ioan", "jobTitle": "Software, server și aplicație",
+            "affiliation": [{ "@type": "School", "name": "Școala Gimnazială nr. 28 Galați" }, { "@type": "EducationalOrganization", "name": "Centrul Județean de Excelență Galați" }] },
+          { "@type": "Person", "name": "Frumuzache Dorin", "jobTitle": "Dronă și sisteme embedded",
+            "affiliation": [{ "@type": "School", "name": "Colegiul Național „Mihail Kogălniceanu” Galați" }, { "@type": "EducationalOrganization", "name": "Centrul Județean de Excelență Galați" }] }
+        ],
+        "parentOrganization": { "@type": "EducationalOrganization", "name": "Centrul Județean de Excelență Galați" },
+        "award": "Premiul II, Olimpiada Națională de Creativitate Științifică, etapa națională 2026",
+        "knowsAbout": ["dronă SAR", "search and rescue drone", "căutare și salvare cu drone", "detecție de persoane cu YOLO", "zbor autonom MAVLink", "LIDAR"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://skytho.space/#faq",
+        "inLanguage": "ro",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ce este o dronă SAR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O dronă SAR (search and rescue, adică de căutare și salvare) caută oameni pierduți sau răniți și îi ajută până ajung salvatorii. SKYTHO este o dronă SAR autonomă: zboară singură până la locația trimisă din telefon, te găsește cu o cameră și un model AI și îți lasă un kit de prim ajutor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cum funcționează SKYTHO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apeși SOS în aplicație și telefonul trimite locația ta GPS. AMI, asistentul nostru AI, află ce s-a întâmplat și dă ordinul de decolare. Drona zboară fără pilot, ocolește obstacolele cu LIDAR-ul, te recunoaște din aer cu un model YOLO, coboară și eliberează trusa lângă tine. Un operator urmărește misiunea live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are nevoie de internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Detecția persoanelor rulează pe dronă, fără internet. Pentru legătura cu aplicația și cu operatorul, drona folosește un modem 4G/5G, cu radio ca rezervă."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ce conține trusa de prim ajutor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Comprese sterile, un bandaj elastic și o folie termică. Trusa e prinsă sub dronă. Când drona ajunge deasupra ta, un servo o eliberează, iar trusa cade la un pas de tine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cine a construit SKYTHO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Otava Radu Ioan și Frumuzache Dorin, elevi de clasa a VIII-a din Galați, la Centrul Județean de Excelență Galați. Proiectul a luat Premiul II la Olimpiada Națională de Creativitate Științifică 2026."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cum vă putem contacta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pe e-mail, la skytho.cex@gmail.com, sau pe Instagram, la @skytho_drone."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Zbor de test al dronei SKYTHO",
+        "description": "Drona SKYTHO decolează, zboară stabil și aterizează la un test pe teren.",
+        "thumbnailUrl": "https://skytho.space/images/flight-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-zbor-test.mp4",
+        "uploadDate": "2026-05-27",
+        "duration": "PT45S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Decolarea dronei SKYTHO",
+        "description": "Drona SAR SKYTHO decolează într-un test de zbor.",
+        "thumbnailUrl": "https://skytho.space/images/skytho-decolare-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-decolare.mp4",
+        "uploadDate": "2026-10-18",
+        "duration": "PT8S"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Test de zbor SKYTHO, filmat de sus",
+        "description": "Echipa SKYTHO testează drona; filmare de la etaj.",
+        "thumbnailUrl": "https://skytho.space/images/skytho-zbor-curte-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-zbor-curte.mp4",
+        "uploadDate": "2026-10-10",
+        "duration": "PT31S"
+      }
+    ]
+  }
+  </script>
+  <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="/css/site.css"/>
+</head>
+<body>
+
+<div class="loader" id="loader" role="status" aria-busy="true">
+  <p class="loader-brand">SKY<b>THO</b></p>
+  <div class="loader-track"><i id="loader-bar"></i></div>
+  <p class="loader-note">Se încarcă scena 3D…</p>
+</div>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div id="dip" aria-hidden="true"></div>
+<div class="overlay" aria-hidden="true">
+  <div class="tag" id="tag"><i></i><span></span></div>
+  <div class="detect" id="detect"><span>Persoană detectată</span></div>
+  <div class="pin" id="pin"><span class="pin-label"></span></div>
+  <p class="hud" id="hud">Până la tine <b id="hud-dist">1,5 km</b></p>
+  <div class="phone" id="phone">
+    <div class="phone-screen">
+      <p class="phone-status"><span>14:02</span><i></i></p>
+      <div class="sos-screen">
+        <p class="sos-brand">SKY<b>THO</b></p>
+        <p class="sos-button">SOS</p>
+        <p class="sos-state"><b>SOS trimis</b>Locația ta GPS a fost trimisă.</p>
+      </div>
+      <div class="chat-screen">
+        <img class="chat-wall" src="/images/chat-wallpaper.webp" alt="" width="640" height="960" decoding="async">
+        <p class="chat-head">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          <b class="chat-avatar">O</b><span>Operator</span>
+          <svg class="chat-call" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </p>
+        <ol class="chat" data-steps="0 1" data-focus>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>Salut! Sunt AMI, asistentul SKYTHO. Am primit SOS-ul și locația ta GPS. Un operator uman e conectat și citește tot. Ce s-a întâmplat?<time>14:02</time></li>
+          <li class="me">Am căzut pe traseu. Mă doare tare glezna stângă și sângerez la gambă. Nu pot să merg.<time>14:02</time></li>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>Drona a decolat spre tine. E la 1,5 km și ajunge în aproximativ 4 minute.<time>14:03</time></li>
+          <li>Până ajunge, rămâi așezat și nu te sprijini pe piciorul rănit. Apasă ferm pe rană cu o pânză curată, 10 minute, fără să o ridici.<time>14:03</time></li>
+          <li>Nu scoate bocancul: îți ține glezna fixă și limitează umflarea. Pune-ți un strat în plus și stai pe rucsac, nu pe pământ.<time>14:03</time></li>
+          <li class="me">Am pus o eșarfă pe rană și apăs.<time>14:03</time></li>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>Foarte bine, rămâi așa. Când auzi drona, nu te ridica: îți va lăsa trusa alături, în stânga ta.<time>14:04</time></li>
+          <li>În trusă ai comprese sterile: pune una peste rană, sub eșarfă. Înfășoară strâns bandajul elastic, dar nu atât de tare încât să-ți amorțească degetele.<time>14:05</time></li>
+          <li>Folia termică e pentru frig: învelește-te cu ea, cu partea argintie spre tine.<time>14:05</time></li>
+          <li>Salvamont a primit locația ta exactă și urcă spre tine. Rămân aici cu tine până ajung ei.<time>14:05</time></li>
+        </ol>
+        <p class="chat-input">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+          <span>Scrie un mesaj</span>
+          <svg class="chat-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="bar">
+  <a class="brand" href="#top" aria-label="SKYTHO, sus">SKY<b>THO</b></a>
+  <p class="bar-note">Dronă autonomă de prim ajutor</p>
+  <nav aria-label="Secțiuni">
+    <a href="#misiunea">Misiunea</a>
+    <a href="#drona">Drona</a>
+    <a href="#proiectul">Proiectul</a>
+    <a href="#echipa">Echipa</a>
+    <a href="#galerie">Galerie</a>
+    <a class="lang" href="/en/" hreflang="en" lang="en" title="English">EN</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Shot 1: the drone waits in the meadow, then the camera lifts to show the mountain -->
+  <section class="shot" data-shot="intro">
+    <div class="stick">
+      <div class="beat beat-hero" data-range="0 0.02">
+        <div class="hero-copy">
+          <p class="kicker">Dronă SAR autonomă · căutare și salvare</p>
+          <h1>Drona care ajunge la tine înaintea salvatorilor.</h1>
+          <p class="lede">Te rănești pe munte și apeși SOS. O dronă autonomă pleacă spre tine cu un kit de prim ajutor.</p>
+        </div>
+        <div class="hero-foot">
+          <dl class="meta">
+            <div><dt>Construită de</dt><dd>doi elevi din Galați</dd></div>
+            <div><dt>Premiul II</dt><dd>Olimpiada Națională de Creativitate Științifică, 2026</dd></div>
+          </dl>
+          <p class="cue">Derulează</p>
+        </div>
+        <img class="fallback" src="/images/drone-render.webp" width="669" height="373" alt="Drona SKYTHO"/>
+      </div>
+      <div class="beat" data-range="0.42 1">
+        <div class="copy copy-wide">
+          <p class="statement" data-reveal="-0.2 0.55">Pe munte, o rană nu așteaptă. Salvatorii urcă pe jos, uneori ore întregi. Până ajung, ești singur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="misiunea" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Capitolul 1</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Cinci momente, de la telefonul tău până la kitul lăsat lângă tine.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>SOS</span><em>Apeși un singur buton.</em></li>
+          <li><b>02</b><span>Decizia</span><em>AI-ul hotărăște decolarea.</em></li>
+          <li><b>03</b><span>Zborul</span><em>Drona vine singură.</em></li>
+          <li><b>04</b><span>Detecția</span><em>Te găsește de sus.</em></li>
+          <li><b>05</b><span>Livrarea</span><em>Kitul ajunge lângă tine.</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">Misiunea</h2>
+    </div>
+  </section>
+
+  <!-- Shot 2: on the mountain. The person presses SOS once; then their screen becomes the phone on the page
+       and the conversation with AMI plays in it (the phone itself is #phone, in the overlay) -->
+  <section class="shot" data-shot="sos">
+    <div class="stick">
+      <div class="beat" data-range="0 0.24">
+        <div class="copy">
+          <p class="num">01</p>
+          <h2>Apeși SOS.</h2>
+          <p data-reveal="0 0.55">Un singur buton. Telefonul trimite locația ta GPS și pornește misiunea.</p>
+        </div>
+      </div>
+      <div class="beat beat-chat" data-range="0.42 1">
+        <div class="copy">
+          <h2>AMI îți scrie imediat.</h2>
+          <p data-reveal="0 0.5">Asistentul nostru AI află ce s-a întâmplat și îți spune, pas cu pas, ce să faci până ajunge drona și cum folosești trusa. Un operator uman e conectat tot timpul.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 3: take-off and flight -->
+  <section class="shot" data-shot="flight" data-dip>
+    <div class="stick">
+      <div class="beat" data-range="0 0.3">
+        <div class="copy">
+          <p class="num">02</p>
+          <h2>AI-ul decide.</h2>
+          <p data-reveal="0 0.5">AMI citește conversația, înțelege cât de gravă e rana și dă dronei ordinul de decolare.</p>
+        </div>
+      </div>
+      <div class="beat" data-range="0.5 1">
+        <div class="copy">
+          <p class="num">03</p>
+          <h2>Drona vine singură.</h2>
+          <p data-reveal="0 0.32">Zboară fără pilot peste pădure și ocolește singură obstacolele din cale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 4: detection from above -->
+  <section class="shot" data-shot="detect">
+    <div class="stick">
+      <div class="beat">
+        <div class="copy">
+          <p class="num">04</p>
+          <h2>Te găsește de sus.</h2>
+          <p data-reveal="0 0.42">Camera și detectorul de persoane de la bord te recunosc din aer. Totul rulează pe dronă, fără internet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 5: delivery -->
+  <section class="shot" data-shot="deliver">
+    <div class="stick">
+      <div class="beat">
+        <div class="copy">
+          <p class="num">05</p>
+          <h2>Kitul ajunge lângă tine.</h2>
+          <p data-reveal="0 0.4">Drona coboară și îți lasă kitul de prim ajutor. Un operator vede totul live, iar salvatorii știu exact unde ești.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="drona" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Capitolul 2</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Construită de noi, piesă cu piesă. Am antrenat modelele, am calibrat senzorii și am printat cadrul.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>Creierul</span><em>Raspberry Pi 5 și Pixhawk</em></li>
+          <li><b>02</b><span>Ochii</span><em>Cameră 4K pe gimbal</em></li>
+          <li><b>03</b><span>Simțurile</span><em>LIDAR 360° și ToF</em></li>
+          <li><b>04</b><span>Propulsia</span><em>4 motoare brushless</em></li>
+          <li><b>05</b><span>Navigația</span><em>GPS M8N</em></li>
+          <li><b>06</b><span>Energia</span><em>Baterie 6000 mAh</em></li>
+          <li><b>07</b><span>Încărcătura</span><em>Trusa de urgență</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">Drona</h2>
+    </div>
+  </section>
+
+  <!-- Shot 6: the drone alone, one part at a time -->
+  <section class="shot" data-shot="studio">
+    <div class="stick">
+      <div class="specs">
+        <div class="spec" data-spec="0">
+          <p class="spec-name"><b>01</b>Creierul</p>
+          <h3>Raspberry Pi 5 + Pixhawk</h3>
+          <p>Raspberry Pi recunoaște oamenii din imagine și vorbește cu aplicația. Pixhawk ține drona stabilă și o conduce pe traseu.</p>
+          <ul class="facts"><li>Procesor cu 4 nuclee la 2,4 GHz</li><li>Controller de zbor Pixhawk 2.4.8</li><li>Totul rulează pe dronă, fără internet</li></ul>
+        </div>
+        <div class="spec" data-spec="1">
+          <p class="spec-name"><b>02</b>Ochii</p>
+          <h3>Cameră 4K pe gimbal</h3>
+          <p>Gimbalul ține imaginea stabilă în vânt. Modelul YOLO antrenat de noi recunoaște un om în imagine, chiar și de la înălțime.</p>
+          <ul class="facts"><li>Imagine 4K</li><li>Detecție YOLO pe dronă</li><li>Transmisie live către operator</li></ul>
+        </div>
+        <div class="spec" data-spec="2">
+          <p class="spec-name"><b>03</b>Simțurile</p>
+          <h3>LIDAR 360° + ToF</h3>
+          <p>Un laser care se rotește măsoară distanța până la tot ce e în jur și desenează, punct cu punct, o hartă. Așa drona ocolește copacii și stâncile.</p>
+          <ul class="facts"><li>Scanează 360° la fiecare rotație</li><li>Senzor ToF pentru înălțimea față de sol</li><li>Vede obstacolele din toate direcțiile</li></ul>
+        </div>
+        <div class="spec" data-spec="3">
+          <p class="spec-name"><b>04</b>Propulsia</p>
+          <h3>4 motoare brushless</h3>
+          <p>Motoare fără perii, cu clopot exterior. Controllerul le ajustează turația de sute de ori pe secundă, ca drona să rămână stabilă.</p>
+          <ul class="facts"><li>Motoare outrunner</li><li>Elice de aproximativ 10 inci</li><li>Două se rotesc în sensul acelor de ceasornic, două în sens invers</li></ul>
+        </div>
+        <div class="spec" data-spec="4">
+          <p class="spec-name"><b>05</b>Navigația</p>
+          <h3>GPS M8N</h3>
+          <p>Primește semnal de la mai multe constelații de sateliți și duce drona exact la locația trimisă din aplicație.</p>
+          <ul class="facts"><li>GPS și GLONASS</li><li>Busolă pentru direcție</li><li>Coordonatele tale, din telefon</li></ul>
+        </div>
+        <div class="spec" data-spec="5">
+          <p class="spec-name"><b>06</b>Energia</p>
+          <h3>Baterie 6000 mAh</h3>
+          <p>Alimentează motoarele, calculatoarele și senzorii. Stă în mijlocul dronei, ca greutatea să fie echilibrată.</p>
+          <ul class="facts"><li>6000 mAh</li><li>Montată în centrul de greutate</li><li>Se schimbă rapid între misiuni</li></ul>
+        </div>
+        <div class="spec" data-spec="6">
+          <p class="spec-name"><b>07</b>Încărcătura</p>
+          <h3>Trusa de urgență</h3>
+          <p>Prinsă sub dronă cu un știft. Deasupra ta, un servo trage știftul și trusa cade lângă tine.</p>
+          <ul class="facts"><li>Eliberare cu servo</li><li>Comprese, bandaj, folie termică</li><li>Ajunge la un pas de tine</li></ul>
+        </div>
+      </div>
+      <ol class="spec-steps" aria-hidden="true"><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li><li>06</li><li>07</li></ol>
+    </div>
+  </section>
+
+  <!-- After the film -->
+  <section class="band band-short" id="proiectul" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Capitolul 3</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Tot ce ai văzut există. Aplicația, serverul, drona și stația operatorului sunt construite și testate de noi.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>Aplicația</span><em>Butonul SOS și chatul cu AMI</em></li>
+          <li><b>02</b><span>Fișa tehnică</span><em>Componentele dronei și limbajele de programare</em></li>
+          <li><b>03</b><span>Echipa</span><em>Cine a construit SKYTHO</em></li>
+          <li><b>04</b><span>Galerie</span><em>Zboruri de test și concursuri</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">Proiectul</h2>
+    </div>
+  </section>
+
+  <section class="sec lock" id="aplicatia" data-pin>
+    <div class="lock-stick">
+      <div class="sec-side">
+        <h2 class="title">Aplicația</h2>
+        <figure class="phone">
+          <img src="/images/ami-chat-720.webp" width="720" height="1418" loading="lazy" decoding="async"
+               alt="Conversație în aplicația SKYTHO: AMI întreabă ce s-a întâmplat, cere persoanei să rămână calmă și anunță că a solicitat trimiterea dronei cu echipament medical"/>
+          <figcaption>Captură din aplicație.</figcaption>
+        </figure>
+      </div>
+      <div class="sec-body">
+        <p class="statement statement-sm" data-reveal="-0.4 0">Un buton roșu și un chat. Atât trebuie să poată folosi un om rănit.</p>
+        <div class="prose">
+          <p>Deschizi aplicația și apeși SOS. Telefonul trimite locația ta GPS și un mesaj de urgență către serverul nostru.</p>
+          <p>Imediat îți scrie AMI, asistentul nostru AI. Te întreabă ce s-a întâmplat și unde te doare, îți spune ce să faci până vine ajutorul și te anunță că drona a plecat. Apoi conversația este preluată de un operator uman.</p>
+        </div>
+        <dl class="rows" data-steps="-0.11 0.78" data-focus>
+          <div><dt>Buton SOS</dt><dd>O apăsare trimite locația și pornește misiunea.</dd></div>
+          <div><dt>Chat cu AMI</dt><dd>Triaj în limba română, cât timp drona e pe drum.</dd></div>
+          <div><dt>Zi și noapte</dt><dd>Două moduri de afișare, ca ecranul să se vadă și pe întuneric.</dd></div>
+          <div><dt>Făcută de noi</dt><dd>Kotlin și Jetpack Compose, pentru Android 8 sau mai nou.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="fisa">
+    <div class="sec-side">
+      <h2 class="title">Fișa tehnică</h2>
+      <p class="side-note">Niciun model AI luat de-a gata. Fiecare model a fost antrenat, fiecare senzor calibrat și fiecare cadru printat 3D de echipă.</p>
+    </div>
+    <div class="sec-body">
+      <dl class="rows">
+        <div><dt>Controller de zbor</dt><dd>Pixhawk, cu navigație autonomă prin MAVLink</dd></div>
+        <div><dt>Calculator de bord</dt><dd>Raspberry Pi 5</dd></div>
+        <div><dt>Detecția persoanelor</dt><dd>Modele YOLO antrenate de noi, pe un accelerator AI de la bord. Funcționează fără internet.</dd></div>
+        <div><dt>Evitarea obstacolelor</dt><dd>LIDAR rotativ la 360°, cu distanțe măsurate pe 8 direcții</dd></div>
+        <div><dt>Stabilizare</dt><dd>GPS, flux optic, LIDAR și altimetru ToF orientat în jos</dd></div>
+        <div><dt>Cameră</dt><dd>4K, pe gimbal cu 3 axe, cu flux FPV live</dd></div>
+        <div><dt>Comunicații</dt><dd>Modem 4G/5G, cu radio ca rezervă</dd></div>
+        <div><dt>Livrare</dt><dd>Kit de prim ajutor eliberat cu un servo</dd></div>
+        <div><dt>Cadru</dt><dd>Printat 3D, modular, reparabil pe teren</dd></div>
+        <div><dt>Stația operatorului</dt><dd>Aplicație desktop cu HUD, hartă și radar LIDAR, compatibilă cu ochelari VR</dd></div>
+      </dl>
+      <h3 class="sheet-head">Limbaje de programare</h3>
+      <dl class="rows">
+        <div><dt>Aplicația mobilă</dt><dd>Kotlin, cu Jetpack Compose, pentru Android</dd></div>
+        <div><dt>Serverul și AMI</dt><dd>Python</dd></div>
+        <div><dt>Pilotul de pe dronă</dt><dd>Python pe Raspberry Pi 5, cu MAVLink către Pixhawk; driverele pentru LIDAR, ToF și flux optic</dd></div>
+        <div><dt>Detecția persoanelor</dt><dd>Python, cu modele YOLO antrenate de noi</dd></div>
+        <div><dt>Stația operatorului</dt><dd>Rust (Tauri), TypeScript și Svelte</dd></div>
+        <div><dt>Site-ul</dt><dd>JavaScript (three.js pentru 3D), HTML și CSS</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="echipa">
+    <div class="sec-side">
+      <h2 class="title">Echipa</h2>
+      <p class="side-note">Suntem doi elevi de clasa a VIII-a din Galați și lucrăm împreună la Centrul Județean de Excelență Galați. Am proiectat, calibrat și testat fiecare componentă de la zero.</p>
+      <a class="cex" href="https://cex.skytho.space/">
+        <img src="/images/cex-logo.webp" width="240" height="216" loading="lazy" decoding="async" alt="Sigla Centrului Județean de Excelență Galați"/>
+        <span>Centrul Județean de Excelență Galați</span>
+      </a>
+    </div>
+    <div class="sec-body">
+      <div class="team-photos">
+        <figure>
+          <img src="/images/team-800.webp" srcset="/images/team-800.webp 800w, /images/team-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 36vw" width="800" height="600" loading="lazy" decoding="async" alt="Echipa SKYTHO la stand, cu drona pe masă, explicând proiectul"/>
+          <figcaption>Prezentarea dronei SKYTHO.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/team-competition-640.webp" srcset="/images/team-competition-640.webp 640w, /images/team-competition-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 20vw" width="640" height="853" loading="lazy" decoding="async" alt="Otava Radu Ioan și Frumuzache Dorin lângă drona SKYTHO și posterul proiectului"/>
+          <figcaption>Olimpiada Națională de Creativitate Științifică, 2026.</figcaption>
+        </figure>
+      </div>
+      <dl class="rows rows-3">
+        <div>
+          <dt>Otava Radu Ioan</dt>
+          <dd>Aplicația mobilă SOS, serverul central, dispecerul AI AMI, stația operatorului, telemetria și harta în timp real.</dd>
+          <dd class="with">Școala Gimnazială nr. 28 Galați, clasa a VIII-a</dd>
+        </div>
+        <div>
+          <dt>Frumuzache Dorin</dt>
+          <dd>Arhitectura hardware, controllerul de zbor, calibrarea LIDAR-ului, antrenarea modelelor YOLO, cadrul 3D și logica de zbor autonom.</dd>
+          <dd class="with">Colegiul Național „Mihail Kogălniceanu” Galați, clasa a VIII-a</dd>
+        </div>
+        <div>
+          <dt>Apostol Valeriu</dt>
+          <dd>Centrul Județean de Excelență Galați.</dd>
+          <dd class="with">Mentor</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec gallery" id="galerie">
+    <div class="sec-side">
+      <h2 class="title">Galerie</h2>
+      <p class="side-note">Drona SKYTHO în teste și la concursuri: zboruri filmate de noi și standul de la olimpiadă.</p>
+    </div>
+    <div class="sec-body">
+      <figure class="gallery-video">
+        <video controls playsinline preload="none" poster="/images/flight-poster.webp" width="848" height="478">
+          <source src="/media/skytho-zbor-test.mp4" type="video/mp4"/>
+          <a href="/media/skytho-zbor-test.mp4">Descarcă filmarea zborului de test</a>
+        </video>
+        <figcaption>Zbor de test: drona decolează, stă pe loc deasupra terenului și aterizează.</figcaption>
+      </figure>
+      <div class="gallery-reels">
+        <figure>
+          <video controls playsinline preload="none" poster="/images/skytho-decolare-poster.webp" width="392" height="848">
+            <source src="/media/skytho-decolare.mp4" type="video/mp4"/>
+            <a href="/media/skytho-decolare.mp4">Descarcă filmarea decolării</a>
+          </video>
+          <figcaption>Decolare la un test de zbor.</figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="none" poster="/images/skytho-zbor-curte-poster.webp" width="478" height="850">
+            <source src="/media/skytho-zbor-curte.mp4" type="video/mp4"/>
+            <a href="/media/skytho-zbor-curte.mp4">Descarcă filmarea testului</a>
+          </video>
+          <figcaption>Test de zbor, filmat de sus.</figcaption>
+        </figure>
+      </div>
+      <div class="gallery-grid">
+        <figure class="tall">
+          <img src="/images/gallery-lab-640.webp" srcset="/images/gallery-lab-640.webp 640w, /images/gallery-lab-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 22vw" width="640" height="853" loading="lazy" decoding="async" alt="Drona SKYTHO pe masa unui stand de prezentare, cu laptopuri și cabluri în jur"/>
+          <figcaption>Drona la un stand de prezentare.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/gallery-demo-640.webp" srcset="/images/gallery-demo-640.webp 640w, /images/gallery-demo-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="Membrii echipei SKYTHO prezintă harta misiunii pe laptop unui profesor"/>
+          <figcaption>Prezentarea stației operatorului.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/gallery-drone-table-640.webp" srcset="/images/gallery-drone-table-640.webp 640w, /images/gallery-drone-table-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="Drona SKYTHO pe masă, cu cele patru elice, LIDAR-ul și camera, alături de echipă"/>
+          <figcaption>Drona, gata de prezentare.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="intrebari">
+    <div class="sec-side">
+      <h2 class="title">Întrebări frecvente</h2>
+      <p class="side-note">Ce este o dronă SAR și cum funcționează SKYTHO, pe scurt.</p>
+    </div>
+    <div class="sec-body">
+      <div class="qa">
+        <h3>Ce este o dronă SAR?</h3>
+        <p>O dronă SAR (search and rescue, adică de căutare și salvare) caută oameni pierduți sau răniți și îi ajută până ajung salvatorii. SKYTHO este o dronă SAR autonomă: zboară singură până la locația trimisă din telefon, te găsește cu o cameră și un model AI și îți lasă un kit de prim ajutor.</p>
+      </div>
+      <div class="qa">
+        <h3>Cum funcționează SKYTHO?</h3>
+        <p>Apeși SOS în aplicație și telefonul trimite locația ta GPS. AMI, asistentul nostru AI, află ce s-a întâmplat și dă ordinul de decolare. Drona zboară fără pilot, ocolește obstacolele cu LIDAR-ul, te recunoaște din aer cu un model YOLO, coboară și eliberează trusa lângă tine. Un operator urmărește misiunea live.</p>
+      </div>
+      <div class="qa">
+        <h3>Are nevoie de internet?</h3>
+        <p>Detecția persoanelor rulează pe dronă, fără internet. Pentru legătura cu aplicația și cu operatorul, drona folosește un modem 4G/5G, cu radio ca rezervă.</p>
+      </div>
+      <div class="qa">
+        <h3>Ce conține trusa de prim ajutor?</h3>
+        <p>Comprese sterile, un bandaj elastic și o folie termică. Trusa e prinsă sub dronă. Când drona ajunge deasupra ta, un servo o eliberează, iar trusa cade la un pas de tine.</p>
+      </div>
+      <div class="qa">
+        <h3>Cine a construit SKYTHO?</h3>
+        <p>Otava Radu Ioan și Frumuzache Dorin, elevi de clasa a VIII-a din Galați, la Centrul Județean de Excelență Galați. Proiectul a luat Premiul II la Olimpiada Națională de Creativitate Științifică 2026.</p>
+      </div>
+      <div class="qa">
+        <h3>Cum vă putem contacta?</h3>
+        <p>Pe e-mail, la <a href="mailto:skytho.cex@gmail.com">skytho.cex@gmail.com</a>, sau pe Instagram, la <a href="https://www.instagram.com/skytho_drone/" rel="noopener" target="_blank">@skytho_drone</a>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="closing" id="contact">
+    <div class="closing-head">
+      <p class="closing-rank">Premiul II</p>
+      <p class="closing-award">Olimpiada Națională de Creativitate Științifică, etapa națională, 2026.</p>
+    </div>
+    <div class="closing-text">
+      <p>Ai o întrebare despre SKYTHO sau vrei să ne vezi drona? Scrie-ne.</p>
+      <ul class="socials">
+        <li><a class="btn" href="mailto:skytho.cex@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg>skytho.cex@gmail.com</a></li>
+        <li><a class="btn" href="https://www.instagram.com/skytho_drone/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6"/></svg>Instagram @skytho_drone</a></li>
+      </ul>
+    </div>
+    <div class="closing-foot">
+      <a class="cex-link" href="https://cex.skytho.space/"><img src="/images/cex-logo.webp" width="240" height="216" loading="lazy" decoding="async" alt="Centrul Județean de Excelență Galați"/></a>
+      <p>SKYTHO este construit de Otava Radu Ioan (Școala Gimnazială nr. 28, clasa a VIII-a) și Frumuzache Dorin (Colegiul Național „Mihail Kogălniceanu”, clasa a VIII-a), din Galați, la Centrul Județean de Excelență Galați.</p>
+      <p lang="en">SKYTHO is an autonomous search and rescue (SAR) drone built by two 8th-grade students from Galați, Romania. Press SOS in the app: the drone flies to your GPS location, finds you with on-board AI person detection and drops a first-aid kit next to you.</p>
+      <p>© 2026 SKYTHO</p>
+    </div>
+  </footer>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

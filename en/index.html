@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SKYTHO — autonomous SAR drone for search and rescue | Romania</title>
+  <meta name="description" content="SKYTHO is an autonomous SAR (search and rescue) drone built by two students from Galați, Romania. Press SOS on your phone: the drone finds you with on-board AI person detection and drops a first-aid kit next to you. 2nd Prize, Romanian National Scientific Creativity Olympiad 2026."/>
+  <meta name="keywords" content="SKYTHO, SAR drone, search and rescue drone, rescue drone, first aid drone, autonomous drone, drone with YOLO person detection, mountain rescue drone, Romania"/>
+  <meta name="author" content="Otava Radu Ioan, Frumuzache Dorin"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="canonical" href="https://skytho.space/en/"/>
+  <link rel="alternate" hreflang="ro" href="https://skytho.space/"/>
+  <link rel="alternate" hreflang="en" href="https://skytho.space/en/"/>
+  <link rel="alternate" hreflang="x-default" href="https://skytho.space/"/>
+  <meta name="theme-color" content="#f2f4f1"/>
+  <link rel="icon" href="/favicon.ico" sizes="48x48"/>
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://skytho.space/en/"/>
+  <meta property="og:site_name" content="SKYTHO"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale:alternate" content="ro_RO"/>
+  <meta property="og:title" content="SKYTHO — the SAR drone that reaches you before the rescuers do"/>
+  <meta property="og:description" content="An autonomous search and rescue drone built by two students from Galați, Romania. Press SOS: the drone finds you and brings a first-aid kit."/>
+  <meta property="og:image" content="https://skytho.space/images/og.jpg"/>
+  <meta property="og:image:secure_url" content="https://skytho.space/images/og.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="The SKYTHO drone with a first-aid kit held underneath"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="SKYTHO — the SAR drone that reaches you before the rescuers do"/>
+  <meta name="twitter:description" content="An autonomous search and rescue drone built by two students from Galați, Romania."/>
+  <meta name="twitter:image" content="https://skytho.space/images/og.jpg"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://skytho.space/en/#page",
+        "url": "https://skytho.space/en/",
+        "name": "SKYTHO — autonomous SAR drone",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://skytho.space/#website"
+        },
+        "about": {
+          "@id": "https://skytho.space/#team"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://skytho.space/en/#faq",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a SAR drone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A SAR (search and rescue) drone looks for people who are lost or injured and helps them until rescuers arrive. SKYTHO is an autonomous SAR drone: it flies by itself to the location sent from your phone, finds you with a camera and an AI model, and drops a first-aid kit next to you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does SKYTHO work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You press SOS in the app and your phone sends your GPS location. AMI, our AI assistant, finds out what happened and gives the order to take off. The drone flies with no pilot, avoids obstacles with its LIDAR, recognises you from the air with a YOLO model, comes down and releases the kit next to you. An operator follows the mission live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it need the internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Person detection runs on the drone, offline. To stay in touch with the app and the operator, the drone uses a 4G/5G modem, with radio as a backup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's in the first-aid kit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sterile dressings, an elastic bandage and a thermal blanket. The kit is held under the drone. When the drone is above you, a servo releases it and the kit lands a step away from you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who built SKYTHO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Otava Radu Ioan and Frumuzache Dorin, 8th-grade students from Galați, Romania, at the Galați County Centre of Excellence. The project won 2nd Prize at the Romanian National Scientific Creativity Olympiad 2026."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can we contact you?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By email at skytho.cex@gmail.com, or on Instagram at @skytho_drone."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Test flight of the SKYTHO drone",
+        "description": "The SKYTHO drone takes off, hovers steadily and lands during a field test.",
+        "thumbnailUrl": "https://skytho.space/images/flight-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-zbor-test.mp4",
+        "uploadDate": "2026-05-27",
+        "duration": "PT45S",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "SKYTHO drone take-off",
+        "description": "The SKYTHO SAR drone taking off during a test flight.",
+        "thumbnailUrl": "https://skytho.space/images/skytho-decolare-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-decolare.mp4",
+        "uploadDate": "2026-10-18",
+        "duration": "PT8S",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "SKYTHO test flight, filmed from above",
+        "description": "The SKYTHO team testing the drone, filmed from an upper floor.",
+        "thumbnailUrl": "https://skytho.space/images/skytho-zbor-curte-poster.webp",
+        "contentUrl": "https://skytho.space/media/skytho-zbor-curte.mp4",
+        "uploadDate": "2026-10-10",
+        "duration": "PT31S",
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="/fonts/archivo-latin-ext.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="/css/site.css"/>
+</head>
+<body>
+
+<div class="loader" id="loader" role="status" aria-busy="true">
+  <p class="loader-brand">SKY<b>THO</b></p>
+  <div class="loader-track"><i id="loader-bar"></i></div>
+  <p class="loader-note">Loading the 3D scene…</p>
+</div>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div id="dip" aria-hidden="true"></div>
+<div class="overlay" aria-hidden="true">
+  <div class="tag" id="tag"><i></i><span></span></div>
+  <div class="detect" id="detect"><span>Person detected</span></div>
+  <div class="pin" id="pin"><span class="pin-label"></span></div>
+  <p class="hud" id="hud">Distance to you <b id="hud-dist">1.5 km</b></p>
+  <div class="phone" id="phone">
+    <div class="phone-screen">
+      <p class="phone-status"><span>14:02</span><i></i></p>
+      <div class="sos-screen">
+        <p class="sos-brand">SKY<b>THO</b></p>
+        <p class="sos-button">SOS</p>
+        <p class="sos-state"><b>SOS sent</b>Your GPS location has been sent.</p>
+      </div>
+      <div class="chat-screen">
+        <img class="chat-wall" src="/images/chat-wallpaper.webp" alt="" width="640" height="960" decoding="async">
+        <p class="chat-head">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          <b class="chat-avatar">O</b><span>Operator</span>
+          <svg class="chat-call" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        </p>
+        <ol class="chat" data-steps="0 1" data-focus>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>Hi! I'm AMI, the SKYTHO assistant. I've received your SOS and your GPS location. A human operator is connected and reading everything. What happened?<time>14:02</time></li>
+          <li class="me">I fell on the trail. My left ankle really hurts and my shin is bleeding. I can't walk.<time>14:02</time></li>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>The drone has taken off towards you. It's 1.5 km away and will arrive in about 4 minutes.<time>14:03</time></li>
+          <li>Until it arrives, stay seated and don't put weight on the injured leg. Press firmly on the wound with a clean cloth for 10 minutes, without lifting it.<time>14:03</time></li>
+          <li>Don't take your boot off: it keeps your ankle still and limits the swelling. Put on an extra layer and sit on your backpack, not on the ground.<time>14:03</time></li>
+          <li class="me">I've put a scarf on the wound and I'm pressing.<time>14:03</time></li>
+          <li class="typing"><i></i><i></i><i></i></li>
+          <li>Well done, stay like that. When you hear the drone, don't get up: it will drop the kit right next to you, on your left.<time>14:04</time></li>
+          <li>The kit has sterile dressings: put one on the wound, under the scarf. Wrap the elastic bandage tightly, but not so tight that your toes go numb.<time>14:05</time></li>
+          <li>The thermal blanket is for the cold: wrap yourself in it, silver side towards you.<time>14:05</time></li>
+          <li>Mountain Rescue (Salvamont) has your exact location and is on the way up. I'll stay here with you until they arrive.<time>14:05</time></li>
+        </ol>
+        <p class="chat-input">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>
+          <span>Type a message</span>
+          <svg class="chat-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="bar">
+  <a class="brand" href="#top" aria-label="SKYTHO, back to the top">SKY<b>THO</b></a>
+  <p class="bar-note">Autonomous first-aid drone</p>
+  <nav aria-label="Sections">
+    <a href="#misiunea">Mission</a>
+    <a href="#drona">The drone</a>
+    <a href="#proiectul">Project</a>
+    <a href="#echipa">Team</a>
+    <a href="#galerie">Gallery</a>
+    <a class="lang" href="/" hreflang="ro" lang="ro" title="Română">RO</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Shot 1: the drone waits in the meadow, then the camera lifts to show the mountain -->
+  <section class="shot" data-shot="intro">
+    <div class="stick">
+      <div class="beat beat-hero" data-range="0 0.02">
+        <div class="hero-copy">
+          <p class="kicker">Autonomous SAR drone · search and rescue</p>
+          <h1>The drone that reaches you before the rescuers do.</h1>
+          <p class="lede">You get hurt in the mountains and press SOS. An autonomous drone sets off towards you with a first-aid kit.</p>
+        </div>
+        <div class="hero-foot">
+          <dl class="meta">
+            <div><dt>Built by</dt><dd>two students from Galați, Romania</dd></div>
+            <div><dt>2nd Prize</dt><dd>Romanian National Scientific Creativity Olympiad, 2026</dd></div>
+          </dl>
+          <p class="cue">Scroll</p>
+        </div>
+        <img class="fallback" src="/images/drone-render.webp" width="669" height="373" alt="The SKYTHO drone"/>
+      </div>
+      <div class="beat" data-range="0.42 1">
+        <div class="copy copy-wide">
+          <p class="statement" data-reveal="-0.2 0.55">In the mountains, an injury doesn't wait. Rescuers climb on foot, sometimes for hours. Until they arrive, you are on your own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="misiunea" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Chapter 1</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Five moments, from your phone to the kit dropped next to you.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>SOS</span><em>One button, pressed once.</em></li>
+          <li><b>02</b><span>The decision</span><em>The AI orders take-off.</em></li>
+          <li><b>03</b><span>The flight</span><em>The drone flies itself.</em></li>
+          <li><b>04</b><span>Detection</span><em>It finds you from above.</em></li>
+          <li><b>05</b><span>Delivery</span><em>The kit lands next to you.</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">The mission</h2>
+    </div>
+  </section>
+
+  <!-- Shot 2: on the mountain. The person presses SOS once; then their screen becomes the phone on the page
+       and the conversation with AMI plays in it (the phone itself is #phone, in the overlay) -->
+  <section class="shot" data-shot="sos">
+    <div class="stick">
+      <div class="beat" data-range="0 0.24">
+        <div class="copy">
+          <p class="num">01</p>
+          <h2>You press SOS.</h2>
+          <p data-reveal="0 0.55">One button. Your phone sends your GPS location and the mission begins.</p>
+        </div>
+      </div>
+      <div class="beat beat-chat" data-range="0.42 1">
+        <div class="copy">
+          <h2>AMI messages you right away.</h2>
+          <p data-reveal="0 0.5">Our AI assistant finds out what happened and tells you, step by step, what to do until the drone arrives and how to use the kit. A human operator is connected the whole time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 3: take-off and flight -->
+  <section class="shot" data-shot="flight" data-dip>
+    <div class="stick">
+      <div class="beat" data-range="0 0.3">
+        <div class="copy">
+          <p class="num">02</p>
+          <h2>The AI decides.</h2>
+          <p data-reveal="0 0.5">AMI reads the conversation, works out how serious the injury is and orders the drone to take off.</p>
+        </div>
+      </div>
+      <div class="beat" data-range="0.5 1">
+        <div class="copy">
+          <p class="num">03</p>
+          <h2>The drone flies itself.</h2>
+          <p data-reveal="0 0.32">It flies over the forest with no pilot and steers around obstacles on its own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 4: detection from above -->
+  <section class="shot" data-shot="detect">
+    <div class="stick">
+      <div class="beat">
+        <div class="copy">
+          <p class="num">04</p>
+          <h2>It finds you from above.</h2>
+          <p data-reveal="0 0.42">The camera and the on-board person detector spot you from the air. It all runs on the drone, with no internet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shot 5: delivery -->
+  <section class="shot" data-shot="deliver">
+    <div class="stick">
+      <div class="beat">
+        <div class="copy">
+          <p class="num">05</p>
+          <h2>The kit lands next to you.</h2>
+          <p data-reveal="0 0.4">The drone comes down and drops the first-aid kit beside you. An operator watches it all live, and the rescuers know exactly where you are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="drona" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Chapter 2</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Built by us, part by part. We trained the models, calibrated the sensors and 3D-printed the frame.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>The brain</span><em>Raspberry Pi 5 and Pixhawk</em></li>
+          <li><b>02</b><span>The eyes</span><em>4K camera on a gimbal</em></li>
+          <li><b>03</b><span>The senses</span><em>360° LIDAR and ToF</em></li>
+          <li><b>04</b><span>Propulsion</span><em>4 brushless motors</em></li>
+          <li><b>05</b><span>Navigation</span><em>M8N GPS</em></li>
+          <li><b>06</b><span>Power</span><em>6000 mAh battery</em></li>
+          <li><b>07</b><span>Payload</span><em>First-aid kit</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">The drone</h2>
+    </div>
+  </section>
+
+  <!-- Shot 6: the drone alone, one part at a time -->
+  <section class="shot" data-shot="studio">
+    <div class="stick">
+      <div class="specs">
+        <div class="spec" data-spec="0">
+          <p class="spec-name"><b>01</b>The brain</p>
+          <h3>Raspberry Pi 5 + Pixhawk</h3>
+          <p>The Raspberry Pi recognises people in the image and talks to the app. The Pixhawk keeps the drone stable and flies it along the route.</p>
+          <ul class="facts"><li>Quad-core 2.4 GHz processor</li><li>Pixhawk 2.4.8 flight controller</li><li>Everything runs on the drone, offline</li></ul>
+        </div>
+        <div class="spec" data-spec="1">
+          <p class="spec-name"><b>02</b>The eyes</p>
+          <h3>4K camera on a gimbal</h3>
+          <p>The gimbal keeps the picture steady in the wind. The YOLO model we trained recognises a person in the image, even from high above.</p>
+          <ul class="facts"><li>4K video</li><li>YOLO detection on board</li><li>Live feed to the operator</li></ul>
+        </div>
+        <div class="spec" data-spec="2">
+          <p class="spec-name"><b>03</b>The senses</p>
+          <h3>LIDAR 360° + ToF</h3>
+          <p>A spinning laser measures the distance to everything around and draws a map, point by point. That's how the drone avoids trees and rocks.</p>
+          <ul class="facts"><li>Scans 360° on every turn</li><li>ToF sensor for the height above the ground</li><li>Sees obstacles in every direction</li></ul>
+        </div>
+        <div class="spec" data-spec="3">
+          <p class="spec-name"><b>04</b>Propulsion</p>
+          <h3>4 brushless motors</h3>
+          <p>Brushless outrunner motors. The controller adjusts their speed hundreds of times a second to keep the drone stable.</p>
+          <ul class="facts"><li>Outrunner motors</li><li>Propellers of about 10 inches</li><li>Two spin clockwise, two anticlockwise</li></ul>
+        </div>
+        <div class="spec" data-spec="4">
+          <p class="spec-name"><b>05</b>Navigation</p>
+          <h3>M8N GPS</h3>
+          <p>It listens to several satellite constellations and takes the drone to the exact location sent from the app.</p>
+          <ul class="facts"><li>GPS and GLONASS</li><li>Compass for heading</li><li>Your coordinates, from your phone</li></ul>
+        </div>
+        <div class="spec" data-spec="5">
+          <p class="spec-name"><b>06</b>Power</p>
+          <h3>6000 mAh battery</h3>
+          <p>It powers the motors, the computers and the sensors. It sits in the middle of the drone to keep the weight balanced.</p>
+          <ul class="facts"><li>6000 mAh</li><li>Mounted at the centre of gravity</li><li>Quick to swap between missions</li></ul>
+        </div>
+        <div class="spec" data-spec="6">
+          <p class="spec-name"><b>07</b>Payload</p>
+          <h3>First-aid kit</h3>
+          <p>Held under the drone by a pin. Above you, a servo pulls the pin and the kit drops next to you.</p>
+          <ul class="facts"><li>Servo release</li><li>Dressings, bandage, thermal blanket</li><li>Lands a step away from you</li></ul>
+        </div>
+      </div>
+      <ol class="spec-steps" aria-hidden="true"><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li><li>06</li><li>07</li></ol>
+    </div>
+  </section>
+
+  <!-- After the film -->
+  <section class="band band-short" id="proiectul" data-pin>
+    <div class="band-stick">
+      <div class="band-top">
+        <div class="band-intro">
+          <span class="pill">Chapter 3</span>
+          <p class="statement statement-sm" data-reveal="-0.5 0.12">Everything you've seen is real. The app, the server, the drone and the operator station were built and tested by us.</p>
+        </div>
+        <ol class="toc" data-steps="0.02 0.8">
+          <li><b>01</b><span>The app</span><em>The SOS button and the chat with AMI</em></li>
+          <li><b>02</b><span>Specifications</span><em>The drone's parts and the programming languages</em></li>
+          <li><b>03</b><span>Team</span><em>Who built SKYTHO</em></li>
+          <li><b>04</b><span>Gallery</span><em>Test flights and competitions</em></li>
+        </ol>
+      </div>
+      <h2 class="mega">The project</h2>
+    </div>
+  </section>
+
+  <section class="sec lock" id="aplicatia" data-pin>
+    <div class="lock-stick">
+      <div class="sec-side">
+        <h2 class="title">The app</h2>
+        <figure class="phone">
+          <img src="/images/ami-chat-720.webp" width="720" height="1418" loading="lazy" decoding="async"
+               alt="A conversation in the SKYTHO app, in Romanian: AMI asks what happened, asks the person to stay calm and says the drone with medical supplies is on its way"/>
+          <figcaption>Screenshot from the app (in Romanian).</figcaption>
+        </figure>
+      </div>
+      <div class="sec-body">
+        <p class="statement statement-sm" data-reveal="-0.4 0">A red button and a chat. That's all an injured person should have to use.</p>
+        <div class="prose">
+          <p>You open the app and press SOS. Your phone sends your GPS location and an emergency message to our server.</p>
+          <p>AMI, our AI assistant, messages you straight away. It asks what happened and where it hurts, tells you what to do until help arrives and lets you know the drone is on its way. Then a human operator takes over the conversation.</p>
+        </div>
+        <dl class="rows" data-steps="-0.11 0.78" data-focus>
+          <div><dt>SOS button</dt><dd>One press sends your location and starts the mission.</dd></div>
+          <div><dt>Chat with AMI</dt><dd>Triage in Romanian while the drone is on its way.</dd></div>
+          <div><dt>Day and night</dt><dd>Two display modes, so the screen stays readable in the dark.</dd></div>
+          <div><dt>Built by us</dt><dd>Kotlin and Jetpack Compose, for Android 8 or newer.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="fisa">
+    <div class="sec-side">
+      <h2 class="title">Specifications</h2>
+      <p class="side-note">No off-the-shelf AI models. The team trained every model, calibrated every sensor and 3D-printed every frame.</p>
+    </div>
+    <div class="sec-body">
+      <dl class="rows">
+        <div><dt>Flight controller</dt><dd>Pixhawk, with autonomous navigation over MAVLink</dd></div>
+        <div><dt>On-board computer</dt><dd>Raspberry Pi 5</dd></div>
+        <div><dt>Person detection</dt><dd>YOLO models we trained, running on an on-board AI accelerator. Works offline.</dd></div>
+        <div><dt>Obstacle avoidance</dt><dd>Rotating 360° LIDAR, measuring distances in 8 directions</dd></div>
+        <div><dt>Stabilisation</dt><dd>GPS, optical flow, LIDAR and a downward-facing ToF altimeter</dd></div>
+        <div><dt>Camera</dt><dd>4K on a 3-axis gimbal, with a live FPV feed</dd></div>
+        <div><dt>Communications</dt><dd>4G/5G modem, with radio as a backup</dd></div>
+        <div><dt>Delivery</dt><dd>First-aid kit released by a servo</dd></div>
+        <div><dt>Frame</dt><dd>3D-printed, modular, repairable in the field</dd></div>
+        <div><dt>Operator station</dt><dd>Desktop app with a HUD, map and LIDAR radar, compatible with VR headsets</dd></div>
+      </dl>
+      <h3 class="sheet-head">Programming languages</h3>
+      <dl class="rows">
+        <div><dt>Mobile app</dt><dd>Kotlin, with Jetpack Compose, for Android</dd></div>
+        <div><dt>Server and AMI</dt><dd>Python</dd></div>
+        <div><dt>On-board pilot</dt><dd>Python on the Raspberry Pi 5, talking MAVLink to the Pixhawk; drivers for the LIDAR, ToF and optical flow</dd></div>
+        <div><dt>Person detection</dt><dd>Python, with YOLO models we trained</dd></div>
+        <div><dt>Operator station</dt><dd>Rust (Tauri), TypeScript and Svelte</dd></div>
+        <div><dt>This website</dt><dd>JavaScript (three.js for 3D), HTML and CSS</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="echipa">
+    <div class="sec-side">
+      <h2 class="title">Team</h2>
+      <p class="side-note">We are two 8th-grade students from Galați, Romania, working together at the Galați County Centre of Excellence (CEX Galați). We designed, calibrated and tested every part from scratch.</p>
+      <a class="cex" href="https://cex.skytho.space/">
+        <img src="/images/cex-logo.webp" width="240" height="216" loading="lazy" decoding="async" alt="Logo of the Galați County Centre of Excellence"/>
+        <span>Galați County Centre of Excellence (CEX)</span>
+      </a>
+    </div>
+    <div class="sec-body">
+      <div class="team-photos">
+        <figure>
+          <img src="/images/team-800.webp" srcset="/images/team-800.webp 800w, /images/team-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 36vw" width="800" height="600" loading="lazy" decoding="async" alt="The SKYTHO team at their stand, with the drone on the table, explaining the project"/>
+          <figcaption>Presenting the SKYTHO drone.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/team-competition-640.webp" srcset="/images/team-competition-640.webp 640w, /images/team-competition-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 20vw" width="640" height="853" loading="lazy" decoding="async" alt="Otava Radu Ioan and Frumuzache Dorin next to the SKYTHO drone and the project poster"/>
+          <figcaption>Romanian National Scientific Creativity Olympiad, 2026.</figcaption>
+        </figure>
+      </div>
+      <dl class="rows rows-3">
+        <div>
+          <dt>Otava Radu Ioan</dt>
+          <dd>The SOS mobile app, the central server, the AMI AI dispatcher, the operator station, telemetry and the live map.</dd>
+          <dd class="with">Middle School No. 28, Galați, 8th grade</dd>
+        </div>
+        <div>
+          <dt>Frumuzache Dorin</dt>
+          <dd>Hardware architecture, the flight controller, LIDAR calibration, YOLO model training, the 3D frame and the autonomous flight logic.</dd>
+          <dd class="with">“Mihail Kogălniceanu” National College, Galați, 8th grade</dd>
+        </div>
+        <div>
+          <dt>Apostol Valeriu</dt>
+          <dd>Galați County Centre of Excellence.</dd>
+          <dd class="with">Mentor</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec gallery" id="galerie">
+    <div class="sec-side">
+      <h2 class="title">Gallery</h2>
+      <p class="side-note">The SKYTHO drone in tests and at competitions: flights we filmed ourselves and our stand at the olympiad.</p>
+    </div>
+    <div class="sec-body">
+      <figure class="gallery-video">
+        <video controls playsinline preload="none" poster="/images/flight-poster.webp" width="848" height="478">
+          <source src="/media/skytho-zbor-test.mp4" type="video/mp4"/>
+          <a href="/media/skytho-zbor-test.mp4">Download the test-flight video</a>
+        </video>
+        <figcaption>Test flight: the drone takes off, hovers over the field and lands.</figcaption>
+      </figure>
+      <div class="gallery-reels">
+        <figure>
+          <video controls playsinline preload="none" poster="/images/skytho-decolare-poster.webp" width="392" height="848">
+            <source src="/media/skytho-decolare.mp4" type="video/mp4"/>
+            <a href="/media/skytho-decolare.mp4">Download the take-off video</a>
+          </video>
+          <figcaption>Take-off during a test flight.</figcaption>
+        </figure>
+        <figure>
+          <video controls playsinline preload="none" poster="/images/skytho-zbor-curte-poster.webp" width="478" height="850">
+            <source src="/media/skytho-zbor-curte.mp4" type="video/mp4"/>
+            <a href="/media/skytho-zbor-curte.mp4">Download the test video</a>
+          </video>
+          <figcaption>Test flight, filmed from above.</figcaption>
+        </figure>
+      </div>
+      <div class="gallery-grid">
+        <figure class="tall">
+          <img src="/images/gallery-lab-640.webp" srcset="/images/gallery-lab-640.webp 640w, /images/gallery-lab-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 22vw" width="640" height="853" loading="lazy" decoding="async" alt="The SKYTHO drone on a stand table, surrounded by laptops and cables"/>
+          <figcaption>The drone at a presentation stand.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/gallery-demo-640.webp" srcset="/images/gallery-demo-640.webp 640w, /images/gallery-demo-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="The SKYTHO team showing the mission map on a laptop to a teacher"/>
+          <figcaption>Presenting the operator station.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/gallery-drone-table-640.webp" srcset="/images/gallery-drone-table-640.webp 640w, /images/gallery-drone-table-1280.webp 1280w" sizes="(max-width: 860px) 100vw, 30vw" width="640" height="480" loading="lazy" decoding="async" alt="The SKYTHO drone on a table, with its four propellers, LIDAR and camera, next to the team"/>
+          <figcaption>The drone, ready to be presented.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="intrebari">
+    <div class="sec-side">
+      <h2 class="title">Frequently asked questions</h2>
+      <p class="side-note">What a SAR drone is and how SKYTHO works, in short.</p>
+    </div>
+    <div class="sec-body">
+      <div class="qa">
+        <h3>What is a SAR drone?</h3>
+        <p>A SAR (search and rescue) drone looks for people who are lost or injured and helps them until rescuers arrive. SKYTHO is an autonomous SAR drone: it flies by itself to the location sent from your phone, finds you with a camera and an AI model, and drops a first-aid kit next to you.</p>
+      </div>
+      <div class="qa">
+        <h3>How does SKYTHO work?</h3>
+        <p>You press SOS in the app and your phone sends your GPS location. AMI, our AI assistant, finds out what happened and gives the order to take off. The drone flies with no pilot, avoids obstacles with its LIDAR, recognises you from the air with a YOLO model, comes down and releases the kit next to you. An operator follows the mission live.</p>
+      </div>
+      <div class="qa">
+        <h3>Does it need the internet?</h3>
+        <p>Person detection runs on the drone, offline. To stay in touch with the app and the operator, the drone uses a 4G/5G modem, with radio as a backup.</p>
+      </div>
+      <div class="qa">
+        <h3>What's in the first-aid kit?</h3>
+        <p>Sterile dressings, an elastic bandage and a thermal blanket. The kit is held under the drone. When the drone is above you, a servo releases it and the kit lands a step away from you.</p>
+      </div>
+      <div class="qa">
+        <h3>Who built SKYTHO?</h3>
+        <p>Otava Radu Ioan and Frumuzache Dorin, 8th-grade students from Galați, Romania, at the Galați County Centre of Excellence. The project won 2nd Prize at the Romanian National Scientific Creativity Olympiad 2026.</p>
+      </div>
+      <div class="qa">
+        <h3>How can we contact you?</h3>
+        <p>By email at <a href="mailto:skytho.cex@gmail.com">skytho.cex@gmail.com</a>, or on Instagram at <a href="https://www.instagram.com/skytho_drone/" rel="noopener" target="_blank">@skytho_drone</a>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="closing" id="contact">
+    <div class="closing-head">
+      <p class="closing-rank">2nd Prize</p>
+      <p class="closing-award">Romanian National Scientific Creativity Olympiad, national stage, 2026.</p>
+    </div>
+    <div class="closing-text">
+      <p>Have a question about SKYTHO or want to see our drone? Write to us.</p>
+      <ul class="socials">
+        <li><a class="btn" href="mailto:skytho.cex@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg>skytho.cex@gmail.com</a></li>
+        <li><a class="btn" href="https://www.instagram.com/skytho_drone/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6"/></svg>Instagram @skytho_drone</a></li>
+      </ul>
+    </div>
+    <div class="closing-foot">
+      <a class="cex-link" href="https://cex.skytho.space/"><img src="/images/cex-logo.webp" width="240" height="216" loading="lazy" decoding="async" alt="Galați County Centre of Excellence"/></a>
+      <p>SKYTHO is built by Otava Radu Ioan (Middle School No. 28, 8th grade) and Frumuzache Dorin (“Mihail Kogălniceanu” National College, 8th grade), from Galați, Romania, at the Galați County Centre of Excellence.</p>
+      <p lang="ro">SKYTHO este o dronă SAR autonomă de căutare și salvare, construită de doi elevi din Galați. Apeși SOS în aplicație, iar drona zboară la locația ta, te găsește cu detecție AI și îți lasă un kit de prim ajutor.</p>
+      <p>© 2026 SKYTHO</p>
+    </div>
+  </footer>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

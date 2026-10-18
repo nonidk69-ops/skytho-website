@@ -1,0 +1,10 @@
+wrangler.jsonc
+.wrangler
+.assetsignore
+# source models: only the web-ready .glb gets published
+models/*.stl
+models/*.blend
+models/*.blend1
+.git
+.gitignore
+README.md

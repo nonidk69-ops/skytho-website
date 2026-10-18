@@ -1,0 +1,8 @@
+# deploy cache (holds account details) and local tooling
+.wrangler/
+# model sources: only the web-ready .glb files belong here
+models/*.stl
+models/*.blend
+models/*.blend1
+Thumbs.db
+desktop.ini
